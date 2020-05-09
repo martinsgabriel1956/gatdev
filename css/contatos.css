@@ -1,0 +1,126 @@
+/* CSS dos contatos */
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.col2 {
+    width: 100%;
+    border-top: 3px dotted green;
+    margin-top: 2rem;
+}
+
+.col2 p {
+    text-align: center;
+}
+
+.col2 ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: auto;
+    display: table;
+}
+
+.col2 img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 400px;
+}
+
+
+/* Página responsiva em resoluções maiores que 640px */
+
+@media (min-width: 640px) {
+    .row {
+        flex-direction: row;
+    }
+    .col1 {
+        flex-grow: 1;
+        padding-right: 1rem;
+    }
+    .col2 {
+        width: 250px;
+        padding-left: 1rem;
+        border: 0;
+        margin: 0;
+        border-left: 3px dotted green;
+    }
+}
+
+
+/* Formulário */
+
+.contatos label {
+    display: block;
+    padding: 0 0 .3rem .5rem;
+}
+
+.contatos input,
+.contatos textarea,
+.contatos button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .3rem;
+    border: 1px solid grey;
+    border-radius: .3rem;
+}
+
+.contatos input,
+.contatos textarea {
+    width: 100%;
+}
+
+.contatos textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+.contatos button {
+    background: linear-gradient(rgb(131, 168, 199), rgb(17, 70, 114));
+    color: white;
+    padding: .3rem 1rem;
+    cursor: pointer;
+}
+
+.contatos button:hover {
+    background: linear-gradient(rgb(250, 119, 72), rgb(129, 34, 0));
+}
+
+
+/* Memsagem de erro */
+
+.msg {
+    padding: 0 1rem 1rem 1rem;
+    margin: auto;
+    border-radius: .4rem;
+    font-size: .8rem;
+}
+
+.msg ul {
+    padding-left: 1rem;
+}
+
+#msgerro,
+.msgphp {
+    background: rgb(255, 197, 197);
+    color: rgb(47, 0, 0);
+}
+
+.msgok {
+    display: table;
+    margin: auto;
+}
+
+.msgphp {
+    display: table;
+    margin: auto;
+}
+
+#msgerro {
+    display: none;
+}

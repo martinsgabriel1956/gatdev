@@ -1,0 +1,217 @@
+/* Pré-configuração do CSS do site */
+
+:root {
+    --tamanho-texto-site: 16px;
+    --tipo-fonte-site: sans-serif;
+    --cor-dos-links: steelblue;
+    --cor-dos-links-em-hover: orangered;
+    --fundo-da-pagina: url('/img/fundo02.jpg') black fixed;
+}
+
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: var(--tamanho-texto-site);
+    font-family: var(--tipo-fonte-site);
+}
+
+a {
+    color: var(--cor-dos-links);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-dos-links-em-hover);
+    text-decoration: underline;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 1rem 0;
+}
+
+
+/* Background da página */
+
+body {
+    background: var(--fundo-da-pagina);
+}
+
+
+/* Página semi-fluída */
+
+.wrap {
+    background: rgba(255, 255, 255, .9);
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+
+/* Cabeçalho */
+
+.header {
+    background: #ff6600;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-right: 1rem;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    -webkit-text-stroke: 1px #000;
+}
+
+.header small {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: .25rem;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+}
+
+
+/* Rodapé */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #444;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    padding: 1rem;
+    color: white;
+}
+
+.footer a:hover {
+    background: orangered;
+    text-decoration: none;
+}
+
+.footer>div {
+    font-size: .8rem;
+}
+
+.footer>div>div {
+    font-size: .75rem;
+    margin-top: .4rem;
+}
+
+.footer>div>div a {
+    padding: 0;
+}
+
+
+/* Conteúdo central */
+
+.main {
+    padding: 0 1.5rem;
+}
+
+
+/* Classe úteis */
+
+.responsivo {
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* Menu principal responsivo */
+
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.nav a {
+    display: block;
+    padding: .8rem;
+    color: #fff;
+}
+
+.nav a:hover,
+.active {
+    background: orangered;
+    text-decoration: none;
+}
+
+.nav>a:first-child {
+    margin-right: auto;
+}
+
+#menulinks {
+    display: none;
+    background: #333;
+    position: absolute;
+    top: 2.75rem;
+    left: 0;
+    box-shadow: 5px 5px 5px #888;
+    min-width: 70%;
+}
+
+@media (min-width: 575px) {
+    #menulinks {
+        display: inline-block;
+        background: inherit;
+        position: relative;
+        top: auto;
+        left: auto;
+        box-shadow: none;
+        min-width: auto;
+    }
+    .nav a {
+        display: inline-block;
+    }
+    .nav>a:last-child,
+    .nav>div span {
+        display: none;
+    }
+}
+
+
+/* Stick footer - Rodapé fica embaixo quando sem barra de rolagem */
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.center {
+    text-align: center;
+}
