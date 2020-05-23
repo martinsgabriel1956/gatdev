@@ -47,12 +47,6 @@ CREATE TABLE categorias (
     nome VARCHAR(127) NOT NULL
 );
 
--- Cria a tabela de ligação artigos <-> categorias
-CREATE TABLE art_cat (
-    id_art_cat INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    artigo_id INT NOT NULL,
-    categoria_id INT NOT NULL    
-);
 
 -- Cria a tabela artigos
 CREATE TABLE artigos (
@@ -66,5 +60,20 @@ CREATE TABLE artigos (
     campo1 TEXT COMMENT 'Reservado para uso futuro',
     campo2 TEXT COMMENT 'Reservado para uso futuro',
     campo3 TEXT COMMENT 'Reservado para uso futuro',
-    status ENUM ('inativo', 'ativo') DEFAULT 'ativo'
+    status ENUM ('inativo', 'ativo') DEFAULT 'ativo',
+
+-- Chave Estrangeira do Autor
+    FOREIGN KEY (autor_id) REFERENCES autores (id_autor)
+);
+
+-- Cria a tabela de ligação artigos <-> categorias
+CREATE TABLE art_cat (
+    id_art_cat INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    artigo_id INT NOT NULL,
+    categoria_id INT NOT NULL,
+
+-- Chave Estrangeira do Artigo
+    FOREIGN KEY (artigo_id) REFERENCES artigos (id_artigo),  
+-- Chave Estrangeira da Categoria
+    FOREIGN KEY (categoria_id) REFERENCES categorias (id_categoria)  
 );
