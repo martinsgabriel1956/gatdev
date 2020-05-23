@@ -48,11 +48,11 @@ if ( $js == "" ) {
         <div class="nav">
             <a href="/" title="Página inicial"><i class="fas fa-fw fa-home"></i></a>
             <div id="menulinks">
-                <a <?php echo ($menu == 'artigos') ? 'class="active"' : null; ?> href="/artigos.php"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
-                <a <?php echo ($menu == 'noticias') ? 'class="active"' : null; ?> href="/noticias.php"><i class="fas fa-fw fa-pen-nib"></i> Notícias</a>
-                <a <?php echo ($menu == 'contatos') ? 'class="active"' : null; ?> href="/contatos.php"><i class="fas fa-fw fa-mail-bulk"></i> Contatos</a>
-                <a <?php echo ($menu == 'sobre') ? 'class="active"' : null; ?> href="/sobre.php"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
-                <a <?php echo ($menu == 'procurar') ? 'class="active"' : null; ?> href="/procurar.php" title="Procurar"><i class="fas fa-fw fa-search"></i><span>&nbsp;Procurar</span></a>
+                <a <?php echo ($menu == 'artigos') ? 'class="active"' : null; ?> href="artigos.php"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
+                <a <?php echo ($menu == 'noticias') ? 'class="active"' : null; ?> href="noticias.php"><i class="fas fa-fw fa-pen-nib"></i> Notícias</a>
+                <a <?php echo ($menu == 'contatos') ? 'class="active"' : null; ?> href="contatos.php"><i class="fas fa-fw fa-mail-bulk"></i> Contatos</a>
+                <a <?php echo ($menu == 'sobre') ? 'class="active"' : null; ?> href="sobre.php"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
+                <a <?php echo ($menu == 'procurar') ? 'class="active"' : null; ?> href="procurar.php" title="Procurar"><i class="fas fa-fw fa-search"></i><span>&nbsp;Procurar</span></a>
             </div>
             <a href="#menu" id="menu" title="Mostra / Oculta menu"><i class="fas fa-fw fa-bars"></i></a>
         </div>
