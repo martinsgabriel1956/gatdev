@@ -20,14 +20,14 @@ $titulo = "Faça Contato";
     Se "", não carrega CSS adicional.
     Exemplo: /css/template.css
 */
-$css = "/css/contatos.css";
+$css = "css/contatos.css";
 
 /*
     $js --> Carrega o JavaScript adicional "desta" página.
     Se "", não usa JavaScript adicional.
     Exemplo: /js/template.js
 */
-$js = "/js/contatos.js";
+$js = "js/contatos.js";
 
 /*
     $menu --> Seleciona o item ativo do menu "nesta" página.
