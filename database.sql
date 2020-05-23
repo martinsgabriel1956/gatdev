@@ -41,6 +41,80 @@ CREATE TABLE autores (
     status ENUM ('inativo', 'ativo') DEFAULT 'ativo'
 );
 
+-- Inderção de dados na tabela autores
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Valdinei da Silva Junior", "Junior",
+    "https://picsum.photos/id/237/200/300", "Doutor Verinário há 10 anos",
+    "silva77@junior.com", "12345",
+    "1977-06-18"
+);
+
+-- Inserir no mínimo 2 autores:
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Claudio Nascimento", "Nascimento",
+    "https://picsum.photos/id/237/199/300", "Estudante de Medicina Veterinaria",
+    "claudio97@br.com", "54321",
+    "1997-12-29"
+);
+
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Ana Lima", "Aninha",
+    "https://picsum.photos/id/237/200/301", "Dona de Petshop e amante desses anjos",
+    "ani94nha@pets.com", "13542",
+    "1994-04-16"
+);
+
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Renata Martins", "Re",
+    "https://picsum.photos/id/237/201/301", "Recepcionista de Petshop",
+    "cats02@re.com", "24531",
+    "2002-01-07"
+);
+
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Sandro Silva", "Sandrin",
+    "https://picsum.photos/id/237/199/299", "Formado em Medicina Veterinário há um mês",
+    "silva@77sandrin.com", "41523",
+    "1977-11-30"
+);
+
+INSERT INTO autores 
+    (nome, apelido,
+    foto, resumo,
+    email, senha,
+    nascimento
+) VALUE (
+    "Simone Lacerda", "Sisa",
+    "https://picsum.photos/id/237/198/300", "Cuidador de Pets",
+    "85sisa@mone.com", "35241",
+    "1985-03-01"
+);
+
 -- Cria a tabela categorias
 CREATE TABLE categorias (
     id_categoria INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
