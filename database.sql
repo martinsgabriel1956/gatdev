@@ -127,7 +127,7 @@ CREATE TABLE categorias (
     INSERT INTO categorias (nome) VALUES ('Pelagem');
 
 -- Insira Pelo menos mais 4 categorias a mais:
-    INSERT INTO categorias (nome) VALUES ('Idade');
+    INSERT INTO categorias (nome) VALUES ('Curiosidades');
     INSERT INTO categorias (nome) VALUES ('Gênero');
     INSERT INTO categorias (nome) VALUES ('Tamanho');
     INSERT INTO categorias (nome) VALUES ('Peso');
@@ -167,8 +167,8 @@ INSERT INTO artigos (
     resumo, texto,
     autor_id
 ) VALUES (
-    "Segundo Artigo", "https://picsum.photos/199",
-    "Resumo do Segundo Artigo", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "Aprenda a cuidar do seu gato", "https://picsum.photos/199",
+    "Resumo do artigo Aprenda a cuidar do seu gato", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
     "2"
 );
  INSERT INTO artigos (
@@ -220,3 +220,23 @@ CREATE TABLE art_cat (
 -- Chave Estrangeira da Categoria
     FOREIGN KEY (categoria_id) REFERENCES categorias (id_categoria)  
 );
+
+-- Insere dados na tabela 'art_cat'
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 2);
+
+-- Cadastrar cada artigo em  categorias    
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 2);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 3);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 4);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 3);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 4);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (4, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (4, 3);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 3);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 4);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (6, 1);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (6, 3);
