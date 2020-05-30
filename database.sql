@@ -121,6 +121,17 @@ CREATE TABLE categorias (
     nome VARCHAR(127) NOT NULL
 );
 
+-- Inserção de dados da tabela "categorias"
+
+    INSERT INTO categorias (nome) VALUES ('Raças');
+    INSERT INTO categorias (nome) VALUES ('Pelagem');
+
+-- Insira Pelo menos mais 4 categorias a mais:
+    INSERT INTO categorias (nome) VALUES ('Idade');
+    INSERT INTO categorias (nome) VALUES ('Gênero');
+    INSERT INTO categorias (nome) VALUES ('Tamanho');
+    INSERT INTO categorias (nome) VALUES ('Peso');
+
 
 -- Cria a tabela artigos
 CREATE TABLE artigos (
