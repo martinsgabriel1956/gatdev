@@ -151,6 +151,64 @@ CREATE TABLE artigos (
     FOREIGN KEY (autor_id) REFERENCES autores (id_autor)
 );
 
+-- Inserção de dados na tabela "artigos"
+INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "Primeiro Artigo", "https://picsum.photos/200",
+    "Resumo do Primeiro Artigo", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "1"
+);
+-- Inserir 6 artigos
+ INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "Segundo Artigo", "https://picsum.photos/199",
+    "Resumo do Segundo Artigo", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "2"
+);
+ INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "Gatos são mais espertos do que aparentam", "https://picsum.photos/198",
+    "Resumo do artigo Gatos são mais espertos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "3"
+);
+ INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "Comunicação com gatos", "https://picsum.photos/201",
+    "Resumo do artigo Comunicação com gatos", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "4"
+);
+ INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "Eles são mais carinhosos do que aparentam", "https://picsum.photos/202",
+    "Resumo do artigo Eles são mais carinhosos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "5"
+);
+ INSERT INTO artigos (
+    titulo, imagem,
+    resumo, texto,
+    autor_id
+) VALUES (
+    "10 Segredos sobre gatos que provavelmente vocês não sabiam", "https://picsum.photos/200",
+    "Resumo do artigo 10 Segredos sobre gatos que provavelmente vocês não sabiam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+    "6"
+);
+ 
+
 -- Cria a tabela de ligação artigos <-> categorias
 CREATE TABLE art_cat (
     id_art_cat INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
