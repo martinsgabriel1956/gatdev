@@ -127,10 +127,7 @@ CREATE TABLE categorias (
     INSERT INTO categorias (nome) VALUES ('Pelagem');
 
 -- Insira Pelo menos mais 4 categorias a mais:
-    INSERT INTO categorias (nome) VALUES ('Curiosidades');
-    INSERT INTO categorias (nome) VALUES ('Gênero');
-    INSERT INTO categorias (nome) VALUES ('Tamanho');
-    INSERT INTO categorias (nome) VALUES ('Peso');
+    INSERT INTO categorias (nome) VALUES ('Curiosidades'),('Gênero'),('Tamanho'),('Peso');
 
 
 -- Cria a tabela artigos
@@ -222,21 +219,7 @@ CREATE TABLE art_cat (
 );
 
 -- Insere dados na tabela 'art_cat'
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 2);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (1, 1),(1, 2);
 
 -- Cadastrar cada artigo em  categorias    
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 2);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 3);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 4);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 3);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (3, 4);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (4, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (4, 3);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 3);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (5, 4);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (6, 1);
-    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (6, 3);
+    INSERT INTO art_cat (artigo_id, categoria_id) VALUES (2, 1),(2, 2),(2, 3),(2, 4),(3, 1),(3, 3),(3, 4),(4, 1),(4, 3),(5, 1),(5, 3),(5, 4),(6, 1),(6, 3);
