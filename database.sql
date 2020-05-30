@@ -63,57 +63,36 @@ INSERT INTO autores
 ) VALUE (
     "Claudio Nascimento", "Nascimento",
     "https://picsum.photos/id/237/199/300", "Estudante de Medicina Veterinaria",
-    "claudio97@br.com", "54321",
-    "1997-12-29"
-);
+    "claudio97@br.com", "54321","1997-12-29"
+    ),
 
-INSERT INTO autores 
-    (nome, apelido,
-    foto, resumo,
-    email, senha,
-    nascimento
-) VALUE (
+    (
     "Ana Lima", "Aninha",
     "https://picsum.photos/id/237/200/301", "Dona de Petshop e amante desses anjos",
     "ani94nha@pets.com", "13542",
     "1994-04-16"
-);
+    ),
 
-INSERT INTO autores 
-    (nome, apelido,
-    foto, resumo,
-    email, senha,
-    nascimento
-) VALUE (
+    (
     "Renata Martins", "Re",
     "https://picsum.photos/id/237/201/301", "Recepcionista de Petshop",
     "cats02@re.com", "24531",
     "2002-01-07"
-);
+    ),
 
-INSERT INTO autores 
-    (nome, apelido,
-    foto, resumo,
-    email, senha,
-    nascimento
-) VALUE (
+    (
     "Sandro Silva", "Sandrin",
     "https://picsum.photos/id/237/199/299", "Formado em Medicina Veterinário há um mês",
     "silva@77sandrin.com", "41523",
     "1977-11-30"
-);
+    ),
 
-INSERT INTO autores 
-    (nome, apelido,
-    foto, resumo,
-    email, senha,
-    nascimento
-) VALUE (
+    (
     "Simone Lacerda", "Sisa",
     "https://picsum.photos/id/237/198/300", "Cuidador de Pets",
     "85sisa@mone.com", "35241",
     "1985-03-01"
-);
+    );
 
 -- Cria a tabela categorias
 CREATE TABLE categorias (
@@ -123,8 +102,7 @@ CREATE TABLE categorias (
 
 -- Inserção de dados da tabela "categorias"
 
-    INSERT INTO categorias (nome) VALUES ('Raças');
-    INSERT INTO categorias (nome) VALUES ('Pelagem');
+    INSERT INTO categorias (nome) VALUES ('Raças'),('Pelagem');
 
 -- Insira Pelo menos mais 4 categorias a mais:
     INSERT INTO categorias (nome) VALUES ('Curiosidades'),('Gênero'),('Tamanho'),('Peso');
@@ -163,49 +141,37 @@ INSERT INTO artigos (
     titulo, imagem,
     resumo, texto,
     autor_id
-) VALUES (
-    "Aprenda a cuidar do seu gato", "https://picsum.photos/199",
-    "Resumo do artigo Aprenda a cuidar do seu gato", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
-    "2"
-);
- INSERT INTO artigos (
-    titulo, imagem,
-    resumo, texto,
-    autor_id
-) VALUES (
-    "Gatos são mais espertos do que aparentam", "https://picsum.photos/198",
-    "Resumo do artigo Gatos são mais espertos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
-    "3"
-);
- INSERT INTO artigos (
-    titulo, imagem,
-    resumo, texto,
-    autor_id
-) VALUES (
-    "Comunicação com gatos", "https://picsum.photos/201",
-    "Resumo do artigo Comunicação com gatos", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
-    "4"
-);
- INSERT INTO artigos (
-    titulo, imagem,
-    resumo, texto,
-    autor_id
-) VALUES (
-    "Eles são mais carinhosos do que aparentam", "https://picsum.photos/202",
-    "Resumo do artigo Eles são mais carinhosos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
-    "5"
-);
- INSERT INTO artigos (
-    titulo, imagem,
-    resumo, texto,
-    autor_id
-) VALUES (
-    "10 Segredos sobre gatos que provavelmente vocês não sabiam", "https://picsum.photos/200",
-    "Resumo do artigo 10 Segredos sobre gatos que provavelmente vocês não sabiam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
-    "6"
-);
- 
+) VALUES
+    (
+        "Aprenda a cuidar do seu gato", "https://picsum.photos/199",
+        "Resumo do artigo Aprenda a cuidar do seu gato", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+        "2"
+    ),
+    
+    (
+        "Gatos são mais espertos do que aparentam", "https://picsum.photos/198",
+        "Resumo do artigo Gatos são mais espertos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+        "3"
+    ),
 
+    (
+        "Comunicação com gatos", "https://picsum.photos/201",
+        "Resumo do artigo Comunicação com gatos", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+        "4"
+    ),
+
+    (
+        "Eles são mais carinhosos do que aparentam", "https://picsum.photos/202",
+        "Resumo do artigo Eles são mais carinhosos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+        "5"
+    ),
+
+    (
+        "10 Segredos sobre gatos que provavelmente vocês não sabiam", "https://picsum.photos/200",
+        "Resumo do artigo 10 Segredos sobre gatos que provavelmente vocês não sabiam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
+        "6"
+    );
+ 
 -- Cria a tabela de ligação artigos <-> categorias
 CREATE TABLE art_cat (
     id_art_cat INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
