@@ -52,15 +52,9 @@ INSERT INTO autores
     "https://picsum.photos/id/237/200/300", "Doutor Verinário há 10 anos",
     "silva77@junior.com", "12345",
     "1977-06-18"
-);
+),
 
--- Inserir no mínimo 2 autores:
-INSERT INTO autores 
-    (nome, apelido,
-    foto, resumo,
-    email, senha,
-    nascimento
-) VALUE (
+(
     "Claudio Nascimento", "Nascimento",
     "https://picsum.photos/id/237/199/300", "Estudante de Medicina Veterinaria",
     "claudio97@br.com", "54321","1997-12-29"
@@ -135,37 +129,27 @@ INSERT INTO artigos (
     "Primeiro Artigo", "https://picsum.photos/200",
     "Resumo do Primeiro Artigo", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
     "1"
-);
--- Inserir 6 artigos
- INSERT INTO artigos (
-    titulo, imagem,
-    resumo, texto,
-    autor_id
-) VALUES
+    ),
     (
         "Aprenda a cuidar do seu gato", "https://picsum.photos/199",
         "Resumo do artigo Aprenda a cuidar do seu gato", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
         "2"
     ),
-    
     (
         "Gatos são mais espertos do que aparentam", "https://picsum.photos/198",
         "Resumo do artigo Gatos são mais espertos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
         "3"
     ),
-
     (
         "Comunicação com gatos", "https://picsum.photos/201",
         "Resumo do artigo Comunicação com gatos", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
         "4"
     ),
-
     (
         "Eles são mais carinhosos do que aparentam", "https://picsum.photos/202",
         "Resumo do artigo Eles são mais carinhosos do que aparentam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
         "5"
     ),
-
     (
         "10 Segredos sobre gatos que provavelmente vocês não sabiam", "https://picsum.photos/200",
         "Resumo do artigo 10 Segredos sobre gatos que provavelmente vocês não sabiam", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit hic, illo praesentium perspiciatis tenetur amet dolore doloremque natus. Voluptatibus aliquam labore, ducimus assumenda officia quisquam saepe sunt quam deserunt! Aperiam.",
