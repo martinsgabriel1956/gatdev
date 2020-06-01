@@ -80,8 +80,9 @@ HTML;
 require '_header.php';
 
 ?> 
+
 <h2>Artigos Recentes</h2>
-<small>Mais recentes primeiro.</small>
+<small class="subtitulo">Mais recentes primeiro.</small>
 
 <?php echo $artigos ?>
 
