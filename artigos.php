@@ -70,6 +70,8 @@ HTML;
 
 }
 
+/////Obtendo a lista de categorias /////
+
 //Query de consulta ao banco de dados
 $sql = "SELECT * FROM categorias ORDER BY nome";
 
@@ -82,17 +84,29 @@ $categoria = '<ul>';
 
 //Loop para obter cada registro do banco de dados
 while ($cat = $res->fetch_assoc()) {
+
+    //Conta o total de artigos nesta categoria
+
+    $sql2 = "SELECT id_art_cat FROM art_cat WHERE categoria_id = {$cat['id_categoria']}";
     
+    //Executa a Query
+    $res2 = $conn->query($sql2);
+
+    //Total de artigos
+    $total = $res->num_rows;
+
     //Cria lista de categorias com HEREDOC
     $categoria .= <<<HTML
     
-    <li><a href="artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a></li>    
+    <li><a href="artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a><small><sup>{$total}</sup></small></li>    
   
 HTML;
 
 }
 
 //Fecha a lista aberta na declaração
+
+
 
 $categoria .= '</ul>';
 
