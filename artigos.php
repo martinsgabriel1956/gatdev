@@ -70,6 +70,31 @@ HTML;
 
 }
 
+//Query de consulta ao banco de dados
+$sql = "SELECT * FROM categorias ORDER BY nome";
+
+//Executa a Query
+
+$res = $conn->query($sql); 
+
+//Declara variável que exibe os artigos
+$categoria = '<ul>';
+
+//Loop para obter cada registro do banco de dados
+while ($cat = $res->fetch_assoc()) {
+    
+    //Cria lista de categorias com HEREDOC
+    $categoria .= <<<HTML
+    
+    <li><a href="artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a></li>    
+  
+HTML;
+
+}
+
+//Fecha a lista aberta na declaração
+
+$categoria .= '</ul>';
 
 //////////////////////////////////////////////////////
 // Seus códigos PHP para esta página terminam aqui! //
@@ -88,13 +113,9 @@ require '_header.php';
     <div class="col1"><?php echo $artigos ?></div>
     <aside class="col2">
         <h3>Categorias</h3>
+        <?php echo $categoria ?>
     </aside>
 </div>
-
-
-
-
-
 
 <?php
 
