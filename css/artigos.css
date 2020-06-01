@@ -1,0 +1,31 @@
+/*CSS dos artigos*/
+
+.artigo{
+    padding: 1rem;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.artigo:nth-child(even) {
+    background: rgb(255, 230, 183);
+}
+
+.artigo:nth-child(odd) {
+    background: rgb(255, 246, 228);
+}
+
+.artigo img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 1rem;
+}
+
+.subtitulo{
+    display: block;
+    margin-bottom: 1rem;
+    text-align: right;
+    color: rgb(56, 56, 56);
+    font-style: italic;
+
+}
