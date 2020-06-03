@@ -93,15 +93,16 @@ while ($cat = $res->fetch_assoc()) {
     $res2 = $conn->query($sql2);
 
     //Total de artigos
-    $total = $res->num_rows;
+    $total = $res2->num_rows;
 
-    //Cria lista de categorias com HEREDOC
-    $categoria .= <<<HTML
-    
-    <li><a href="artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a><small><sup>{$total}</sup></small></li>    
-  
+    //Só exibe categoria se existir artigo nela
+    if ($total > 0) {
+        //Cria lista de categorias com HEREDOC
+        $categoria .= <<<HTML
+        <li><a href="artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a><small><sup>{$total}</sup></small></li>    
+
 HTML;
-
+    }
 }
 
 //Fecha a lista aberta na declaração
