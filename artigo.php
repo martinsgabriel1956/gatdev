@@ -45,7 +45,8 @@ $menu = "artigos";
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-print_r($id);
+//Se não tiver id, irá retornar para a listagem de artigos
+if ($id == 0) header('Location: /artigos.php');
 
 //////////////////////////////////////////////////////
 // Seus códigos PHP para esta página terminam aqui! //
