@@ -50,21 +50,43 @@ if ($id == 0) header('Location: /artigos.php');
 
 //Le o artigo do banco de dados
 
-$sql = "SELECT * FROM `artigos` WHERE id_artigo = '{$id}' AND status = 'ativo'";
+$sql = "SELECT *, DATE_FORMAT(data, '%d de %M de %Y') AS databr FROM `artigos` WHERE id_artigo = '{$id}' AND status = 'ativo'";
 
 //Executa a Query
 $res = $conn->query($sql);
 
-//Obter os dados
+//Verifica se artigo existe realmente. Se não existir, volta para a listagem de artigos
+if($res->num_rows < 1){
+    header('Location: /artigos.php');
+} //num_rows == conta quantos elementos vieram do banco de dados
 
+
+
+//Obter os dados
 $art = $res->fetch_assoc();
+
+//Obtém dados do autor
+$sql = "SELECT * FROM `autores` WHERE `id_autor` = '2'";
+$res = $conn->query($sql);
+$autor = $res->fetch_assoc();
+
+//DEBUG: print_r($autor); exit();
+
+
+//Troca o título da pagina (tag Title)
+$titulo = $art['titulo'];
+
 
 //DEBUG = print_r($art);
 
 //Formatar artigo
 $artigo = <<<HTML
     <h2>{$art['titulo']}</h2>
+    <small class='subtitulo'>Por <a href="">{$autor['apelido']}</a> em {$art['databr']}</small>
     <div>{$art['texto']}</div>
+
+<img src="{$autor['foto']}">{$autor['nome']} - {$autor['email']}
+
 
 HTML;
 
