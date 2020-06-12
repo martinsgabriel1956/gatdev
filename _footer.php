@@ -1,3 +1,4 @@
+    </main>
     <footer class="footer">
         <a href="/" title="Ir para a página inicial"><i class="fas fa-fw fa-home"></i></a>
         <div>
