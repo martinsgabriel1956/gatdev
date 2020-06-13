@@ -27,7 +27,7 @@ $css = "css/artigos.css";
     Se "", não usa JavaScript adicional.
     Exemplo: /js/template.js
 */
-$js = "";
+$js = "js/artigos.js";
 
 /*
     $menu --> Define o item ativo do menu "nesta" página.
@@ -66,7 +66,7 @@ if($res->num_rows < 1){
 $art = $res->fetch_assoc();
 
 //Obtém dados do autor
-$sql = "SELECT * FROM `autores` WHERE `id_autor` = '2'";
+$sql = "SELECT *, TIMESTAMPDIFF(YEAR, nascimento, CURDATE()) AS idade FROM `autores` WHERE `id_autor` = '{$art['autor_id']}'";
 $res = $conn->query($sql);
 $autor = $res->fetch_assoc();
 
@@ -81,12 +81,24 @@ $titulo = $art['titulo'];
 
 //Formatar artigo
 $artigo = <<<HTML
+    
     <h2>{$art['titulo']}</h2>
-    <small class='subtitulo'>Por <a href="">{$autor['apelido']}</a> em {$art['databr']}</small>
+    <small class='subtitulo'>Por <a href="#" id="mostraAutor">{$autor['apelido']}</a> em {$art['databr']}</small>
     <div>{$art['texto']}</div>
 
-<img src="{$autor['foto']}">{$autor['nome']} - {$autor['email']}
-
+    <div id="modal">
+        <div class="modal-box">
+            <div class="modal-body">
+                <span class="close-modal"><i class="fas fa-times"></i></span>
+                <img src="{$autor['foto']}" alt="{$autor['nome']}" title="{$autor['nome']}">
+                <h3>{$autor['nome']}</h3>
+                <small>{$autor['email']} - {$autor['idade']} anos</small>
+                <p>{$autor['resumo']}</p>
+                <hr>
+                <a href="#fechar" class="close-modal">Fechar</a>
+            </div>
+        </div>
+    </div>
 
 HTML;
 
