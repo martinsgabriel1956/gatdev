@@ -43,6 +43,51 @@
     margin-bottom: 2rem;
 }
 
+#modal{
+    display: block;
+}
+
+.modal-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body{
+    text-align: center;
+    background: #fff;
+    padding: 1rem;
+    max-width: 90%;
+}
+
+.modal-body img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px dotted #888;
+    padding: .5rem;
+}
+
+span.close-modal{
+    float: right;
+    margin: -0.5rem -0.5rem 0 0;
+}
+
+.modal-body hr{
+    border: none;
+    border-bottom: 1px dotted #888;
+}
+
+.modal-body h3{
+    margin-bottom: 0;
+}
+
 /* Página responsiva em resoluções maiores que 640px */
 
 @media (min-width: 640px) {
