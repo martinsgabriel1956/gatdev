@@ -72,11 +72,24 @@ $autor = $res->fetch_assoc();
 
 //DEBUG: print_r($autor); exit();
 
+//Obtém a lista de categorias
+$sql = "SELECT id_categoria, nome FROM art_cat INNER JOIN categorias ON categoria_id = id_categoria WHERE artigo_id = '{$id}' ORDER BY nome";
+$res = $conn->query($sql);
+
+
+//Monta lista de categorias
+$categorias = '<strong>Categorias: </strong> ';
+while ($cat = $res->fetch_assoc()) {
+    $categorias .= <<<HTML
+<a href="/artigos.php?c={$cat['id_categoria']}">{$cat['nome']}</a>, 
+HTML;
+}
+
+$categorias = substr($categorias, 0, -2) . ".";
+
 
 //Troca o título da pagina (tag Title)
 $titulo = $art['titulo'];
-
-
 //DEBUG = print_r($art);
 
 //Formatar artigo
@@ -85,6 +98,8 @@ $artigo = <<<HTML
     <h2>{$art['titulo']}</h2>
     <small class='subtitulo'>Por <a href="#" id="mostraAutor">{$autor['apelido']}</a> em {$art['databr']}</small>
     <div>{$art['texto']}</div>
+
+    <div class="categorias">{$categorias}</div>
 
     <div id="modal">
         <div class="modal-box">
