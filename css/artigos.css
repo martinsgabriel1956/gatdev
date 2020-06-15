@@ -44,7 +44,7 @@
 }
 
 #modal{
-    display: block;
+    display: none;
 }
 
 .modal-box{
@@ -79,13 +79,19 @@ span.close-modal{
     margin: -0.5rem -0.5rem 0 0;
 }
 
-.modal-body hr{
+hr{
     border: none;
     border-bottom: 1px dotted #888;
 }
 
 .modal-body h3{
     margin-bottom: 0;
+}
+
+.categorias{
+    padding: .6rem;
+    margin: 1rem 0;
+    background: rgb(253, 218, 153);
 }
 
 /* Página responsiva em resoluções maiores que 640px */
