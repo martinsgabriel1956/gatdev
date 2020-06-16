@@ -15,6 +15,7 @@
 </div>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.rss.min.js"></script>
 <script src="js/global.js"></script>
 <?php echo $js ?>
 </body>
