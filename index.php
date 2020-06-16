@@ -13,21 +13,21 @@ require ('_config.php');
     $titulo --> Define o título "desta" página.
     Se = "", usa o título e o slogan do site.
 */
-$titulo = "Home";
+$titulo = "";
 
 /*
     $css --> Carrega o CSS adicional "desta" página.
     Se "", não carrega CSS adicional.
     Exemplo: /css/template.css
 */
-$css = "";
+$css = "css/index.css";
 
 /*
     $js --> Carrega o JavaScript adicional "desta" página.
     Se "", não usa JavaScript adicional.
     Exemplo: /js/template.js
 */
-$js = "";
+$js = "js/index.js";
 
 /*
     $menu --> Define o item ativo do menu "nesta" página.
@@ -41,7 +41,26 @@ $menu = "";
 // Seus códigos PHP para esta página começam aqui! //
 /////////////////////////////////////////////////////
 
+// Obtém 4 artigos mais recentes
+$sql = "SELECT id_artigo, titulo, imagem, resumo FROM artigos WHERE status = 'ativo' ORDER BY data DESC LIMIT 4";
+$res = $conn->query($sql);
+$artigos = '';
 
+while($art = $res->fetch_assoc()):
+
+    // Lista de artigos usando HEREDOC
+    $artigos .= <<<HTML
+
+<div class="artigo">
+    <a href="artigo.php?id={$art['id_artigo']}"><img src="{$art['imagem']}" alt="{$art['titulo']}"></a>
+    <a href="artigo.php?id={$art['id_artigo']}"><h4>{$art['titulo']}</h4></a>
+    <span>{$art['resumo']}</span>
+    <small><a href="artigo.php?id={$art['id_artigo']}">Ler mais...</a></small>
+</div>
+
+HTML;
+
+endwhile;
 
 //////////////////////////////////////////////////////
 // Seus códigos PHP para esta página terminam aqui! //
@@ -53,13 +72,52 @@ require ('_header.php');
 
 ?> 
 
-<h2>Proin vestibulum blandit</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis sapien vel ultrices molestie. Phasellus ut tellus feugiat, tincidunt orci in, lobortis urna. Morbi eu efficitur lectus. Nullam eleifend tellus quis consequat hendrerit. Vivamus nec hendrerit nibh. Nam auctor viverra lacus ut lobortis. In odio eros, semper a tellus eget, facilisis faucibus nulla.</p>
-<a href="http://luferat.net/">Site do Fessô</a>
-<p lang="en">Nullam scelerisque nisi est, a tincidunt nulla dictum vitae. Integer tincidunt felis lectus, eu sollicitudin mauris euismod vel. Aenean consectetur, arcu quis feugiat convallis, quam quam sollicitudin quam, in aliquet nulla ipsum et est. Donec in maximus magna, rutrum pretium augue. Donec quis pretium dui. Nulla tempor a velit eu finibus. Donec egestas ante vitae odio ultrices, vel egestas odio auctor. Nullam dictum lacus ut augue tempor ornare. Aenean vel nisl sit amet quam lobortis tempor. Ut id bibendum urna, at cursus justo. Quisque nisi risus, egestas in mi in, semper varius ipsum. Sed euismod bibendum pellentesque.</p>
-<img class="responsivo" src="https://picsum.photos/400/300" alt="Imagem aleatória">
-<p>Donec efficitur posuere commodo. Nulla in metus eu risus suscipit dignissim. Donec purus velit, varius nec placerat quis, gravida id velit. Vestibulum eget sodales metus. Sed rhoncus tellus augue, sit amet ultricies erat convallis vitae.</p>
-<p>Sed tincidunt ipsum justo, quis tempus enim tempus sed. Proin nisi nisi, commodo vel sollicitudin quis, efficitur ut purus. In hac habitasse platea dictumst. Curabitur hendrerit justo dolor, ac consequat nisi imperdiet ut. Nam in diam vel dolor viverra ultricies vel vel metus. Etiam semper luctus augue ac pellentesque. Nulla mi nisl, eleifend et aliquam eu, mattis vitae ligula.</p>
+<div class="slideshow">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col1">
+        <h3>Artigos Recentes</h3>
+        <?php echo $artigos ?>
+        <p class="center"><a href="/artigos.php">Todos os artigos</a></p>
+    </div>
+    <div class="col2">
+        <h3>Notícias Recentes</h3>
+        <div id="news"></div>
+        <p class="center"><a href="/noticas.php">Todas as notícias</a></p>
+    </div>
+</div>
 
 <?php
 
