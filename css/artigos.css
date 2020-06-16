@@ -21,6 +21,10 @@
     margin-right: 1rem;
 }
 
+.artigo h4{
+    margin-top: 0.4rem;
+}
+
 .subtitulo{
     display: block;
     margin-bottom: 1rem;
@@ -41,6 +45,14 @@
     border-top: 3px dotted green;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+aside ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    line-height: 1.4;
+    font-size: .95rem;
 }
 
 #modal{
