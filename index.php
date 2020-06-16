@@ -115,7 +115,7 @@ require ('_header.php');
     <div class="col2">
         <h3>Notícias Recentes</h3>
         <div id="news"></div>
-        <p class="center"><a href="/noticas.php">Todas as notícias</a></p>
+        <p class="center"><a href="/noticias.php">Todas as notícias</a></p>
     </div>
 </div>
 
