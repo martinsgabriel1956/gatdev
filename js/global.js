@@ -85,3 +85,12 @@ function menuChange() {
 function _(txtMsg) {
     console.log(txtMsg);
 }
+
+// Exibe notícias
+function showNews(htmlElement, totalItems, keyWord) {
+    $(htmlElement).rss('https://news.google.com/rss/search?q=' + keyWord + '&hl=pt-BR', {
+        limit: totalItems,
+        layoutTemplate: '<ul>{entries}</ul>',
+        entryTemplate: '<li><a href="{url}" target="_blank">{title}</li>'
+    });
+}
