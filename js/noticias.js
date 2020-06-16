@@ -1,0 +1,1 @@
+$(document).ready(showNews('#news', 15, 'windows')); 
